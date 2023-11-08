@@ -1,0 +1,18 @@
+
+
+<input type="text"    
+       class="form-control"       
+       [(ngModel)]="userName">
+
+<p>Printing Username by String interpolation : {{ userStatus }}  </p>
+
+<button class="btn"
+[disabled] = "userName === ''"
+(click)="onClickAddUser()">ADD USER</button>
+
+<br>
+<br>
+
+<app-server></app-server>
+
+

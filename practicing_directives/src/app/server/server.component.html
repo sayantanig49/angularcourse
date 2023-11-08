@@ -1,0 +1,25 @@
+<div> 
+<h2>Practicing Directives : </h2>
+
+    <div>
+        <p *ngIf="textStatus; else noText">
+            Books are an important part of our life. We read many kinds of books. <br>
+            We study text books at school that are part of our syllabus.
+
+            We also have story books that we read for leisure and fun. We can get them from the school library. 
+            <br>We can also buy them from bookshops. Books are printed on paper, and can have pictures too that make
+            them interesting. We can read books on the computer as well.
+            <br> <br>
+
+        </p>
+        <ng-template #noText>
+            <p></p>
+        </ng-template>
+    </div>
+    <button class="btn btn-primary" (click)="onClickButton()">Display Details</button>
+
+    <h4>Printing  textStatusArray </h4>
+    <p *ngFor="let textSts of textStatusArray"
+    [ngStyle]="{backgroundColor : getStatusColor()}" 
+    [ngClass]="{stsColor: index > 4}">{{ textStatusArray }}  </p>
+</div>
